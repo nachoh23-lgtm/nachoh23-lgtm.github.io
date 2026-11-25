@@ -56,11 +56,16 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .st{font-family:var(--fh);font-weight:600;font-size:clamp(30px,4vw,40px);line-height:1.1;color:var(--hd)}
 .sm{margin-top:16px;font-size:17px;line-height:1.7;max-width:600px}
 .t1+.sm{margin-top:32px}
-.sm.p3{margin-top:28px}
-.hl{margin-top:40px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;color:var(--hd);max-width:600px}
-.ct{margin-top:56px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.2;color:var(--tx)}
+.hl{margin-top:36px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;color:var(--hd);max-width:600px}
+.lb{margin:0 0 14px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.blk{margin-top:56px;border-top:1px solid var(--ln);padding-top:56px}
+#v-home .t1+.blk,#v-home .rl+.blk{margin-top:56px}
+.blk .sm:first-of-type{margin-top:0}
+.cbtn{font:inherit;font-size:14px;font-weight:600;color:var(--hd);background:none;border:1.5px solid var(--hd);border-radius:99px;padding:7px 16px;cursor:pointer;transition:background .15s,color .15s}
+.cbtn:hover{background:var(--hb);color:var(--hf)}
+.ct{margin:0;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.2;color:var(--tx)}
 
-.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px;max-width:720px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px;max-width:720px}
 .card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:112px;padding:16px;border:1px solid var(--ln);border-radius:8px;font-weight:500;font-size:15px;color:var(--tx);transition:background .15s,color .15s,border-color .15s}
 .card svg.i{font-size:24px}
 .card:hover,.pill:hover{background:var(--hb);border-color:var(--hb);color:var(--hf)}
@@ -85,25 +90,25 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .logo img{height:38px}
   .lk .tile{display:none}
   .lg{margin-left:0}
+  .lk{gap:10px}
   .wrap{padding:0 18px}
   .view{display:none}
   .view.on{display:block}
-  #v-home.on{display:flex;flex-direction:column}
-  #v-home>*{order:6}
-  #v-home .who{order:1}#v-home .rl{order:2}#v-home .t1{order:3}#v-home .ct{order:4;margin-top:24px}#v-home .g3{order:5}
   #v-home{padding:36px 0 24px}
   #v-projects,#v-fun{border-top:0;padding:36px 0 24px}
   .who{font-size:24px}
   .rl{margin-top:10px;font-size:12px}
-  .t1{margin-top:20px;font-size:30px}
+  .t1{margin-top:20px;font-size:28px;line-height:1.12}
   .st{font-size:30px}
   .sm{font-size:16px;margin-top:14px}
   .t1+.sm{margin-top:14px}
-  #v-home .sm:first-of-type,#v-home .g3+.sm{margin-top:28px}
-  #v-home .sm.p3{margin-top:20px}
-  .hl{font-size:20px;margin-top:32px}
-  .ct{margin-top:28px;font-size:20px}
-  .g3{gap:8px;margin-top:10px}
+  .blk{margin-top:36px;padding-top:36px}
+  .lb{font-size:12px;margin-bottom:12px}
+  #v-home .t1+.blk{margin-top:44px;border-top:0;padding-top:0}
+  .cbtn{font-size:13px;padding:6px 14px}
+  .hl{font-size:20px;margin-top:28px}
+  .ct{font-size:20px}
+  .g3{gap:8px;margin-top:14px}
   .card{min-height:88px;padding:12px 8px;font-size:13px;gap:8px}
   .card svg.i{font-size:22px}
   .pj{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:24px}
@@ -136,6 +141,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     <nav class="lk" aria-label="Main">
       <a href="#/projects" class="tile" data-route="projects" data-t="projects">Projects</a>
       <a href="#/fun" class="tile" data-route="fun" data-t="fun">Fun stuff</a>
+      <button type="button" class="cbtn" id="cbtn" data-t="ct">Contact</button>
       <span class="lg" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button> | <button type="button" data-lang="es" aria-pressed="false">ES</button></span>
     </nav>
   </div>
@@ -146,17 +152,24 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     <section class="view" id="v-home" data-view="home">
       <p class="who">Ignacio Hernández</p>
       <p class="rl">Operations Manager · Madrid</p>
-      <h1 class="t1" data-t="h1">I turn complex, unstructured operations into systems that work.</h1>
-      <p class="sm" data-t="p1"></p>
-      <p class="sm" data-t="p1b"></p>
-      <p class="sm" data-t="p2"></p>
-      <p class="sm p3" data-t="p3"></p>
-      <p class="hl" data-t="hl"></p>
-      <h2 class="ct" data-t="ct">Contact</h2>
-      <div class="g3">
-        <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-mail"/></svg><span>Email</span></a>
-        <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
-        <a class="card" id="c-cv" href="cv/Ignacio_Hernandez_CV_EN.pdf" download><svg class="i"><use href="#i-cv"/></svg><span>CV</span></a>
+      <h1 class="t1" data-t="h1"></h1>
+      <div class="blk" id="exp">
+        <h2 class="lb" data-t="lb1"></h2>
+        <p class="sm" data-t="p1"></p>
+      </div>
+      <div class="blk" id="how">
+        <h2 class="lb" data-t="lb2"></h2>
+        <p class="sm" data-t="p1b"></p>
+        <p class="sm" data-t="p2"></p>
+        <p class="hl" data-t="hl"></p>
+      </div>
+      <div class="blk" id="contact">
+        <h2 class="ct" data-t="ct">Contact</h2>
+        <div class="g3">
+          <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-mail"/></svg><span>Email</span></a>
+          <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
+          <a class="card" id="c-cv" href="cv/Ignacio_Hernandez_CV_EN.pdf" download><svg class="i"><use href="#i-cv"/></svg><span>CV</span></a>
+        </div>
       </div>
     </section>
 
@@ -201,8 +214,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       p1:'I\'ve led operations in startups, including the integration after a merger between two of them. I\'ve also managed partner programs and onboarding at Microsoft, and remotely restructured a family agricultural business.',
       p1b:'What I enjoy most is finding where a process falls short: too slow, too manual, full of errors or not yet digitized. Then I redesign it and choose the systems and tools that make it work better, from projects to onboardings to support flows.',
       p2:'With that experience, I\'m now starting to use AI to make processes more efficient, and I want to bring that to small and medium-sized businesses.',
-      p3:'If you have a process that needs fixing, let\'s talk.',
-      ct:'Contact',
+      ct:'Contact', lb1:'Experience', lb2:'How I work',
       hl:'Before putting weeks or budget into an idea, I build a rough version with AI and see if it holds.',
       c1:'In construction',m1:'Used-car marketplace for Venezuela',d1:'A modern marketplace for used cars: vehicle information, price history and inspections by verified workshops. Starting in Maracaibo.',
       c2:'Idea · Coming soon',m2:'AI consulting',d2:'Helps small and medium businesses optimize and automate their processes, and choose the best tools for their workflows.',
@@ -213,8 +225,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       p1:'He liderado operaciones en startups, incluida la integración tras la fusión de dos de ellas. También he gestionado programas de partners y onboarding en Microsoft, y reestructurado en remoto una empresa agropecuaria familiar.',
       p1b:'Lo que más disfruto es encontrar dónde falla un proceso: demasiado lento, demasiado manual, con muchos errores o todavía sin digitalizar. Después lo rediseño y elijo los sistemas y herramientas que lo hagan funcionar mejor, desde proyectos hasta onboardings y flujos de soporte.',
       p2:'Con esa experiencia, ahora estoy empezando a usar la IA para hacer los procesos más eficientes, y quiero llevarlo a pequeñas y medianas empresas.',
-      p3:'Si tienes un proceso que arreglar, hablemos.',
-      ct:'Contacto',
+      ct:'Contacto', lb1:'Experiencia', lb2:'Cómo trabajo',
       hl:'Antes de invertir semanas o dinero en una idea, construyo una versión básica con IA y compruebo si se sostiene.',
       c1:'En construcción',m1:'Marketplace de coches usados para Venezuela',d1:'Un marketplace moderno de coches usados: información del vehículo, historial de precios e inspecciones en talleres verificados. Empezando en Maracaibo.',
       c2:'Idea · Próximamente',m2:'Consultoría IA',d2:'Ayuda a pequeñas y medianas empresas a optimizar y automatizar sus procesos y a elegir las mejores herramientas para sus flujos de trabajo.',
@@ -274,6 +285,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       try{ history.replaceState(null,'', r==='home' ? location.pathname : '#/'+r); }catch(_){}
       goTo(r);
     });
+  });
+
+  document.getElementById('cbtn').addEventListener('click', function(){
+    if(mq.matches){ setActive('home'); try{ history.replaceState(null,'',location.pathname); }catch(_){} }
+    setTimeout(function(){ document.getElementById('contact').scrollIntoView({behavior:mq.matches?'auto':'smooth', block:'start'}); }, mq.matches?30:0);
   });
 
   // Email: abre Gmail con el destinatario, sin escribir la dirección en el HTML
