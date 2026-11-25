@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ignacio Hernández · Operations Manager</title>
+<meta name="description" content="Ignacio Hernández, Operations Manager in Madrid. I turn complex, unstructured operations into systems that work.">
+<meta name="theme-color" content="#00274C">
+<style>
+@font-face{font-family:"Bagel Fat One";font-weight:400;font-display:swap;src:url(fonts/bagel-fat-one-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:400;font-display:swap;src:url(fonts/bricolage-grotesque-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Bricolage Grotesque";font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2")}
+
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--sb:#00274C;--hd:#FFCB05;--tx:#F1E9C6;--cd:#0A3466;--hb:#FFCB05;--hf:#00274C}
+html{background:var(--sb)}
+body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--sb);color:var(--tx);line-height:1.5;min-height:100vh}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--hd);outline-offset:3px;border-radius:6px}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+.wrap{max-width:980px;margin:0 auto;padding:28px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.nm{font-family:"Bagel Fat One",system-ui,sans-serif;color:var(--hd);font-size:25px;line-height:1;-webkit-text-stroke:1px var(--hd)}
+.lk{display:flex;gap:10px;align-items:center}
+.tile{padding:8px 16px;border:1.5px solid var(--hd);border-radius:12px;font-weight:700;font-size:14px;color:var(--hd);transition:background .15s,color .15s}
+.tile[aria-current=page]{background:var(--hb);color:var(--hf)}
+.lg{font-size:13px;font-weight:700;color:var(--tx);margin-left:6px;white-space:nowrap}
+.lg button{font:inherit;color:inherit;background:none;border:0;padding:2px;cursor:pointer}
+.lg button[aria-pressed=true],.lg button:hover{color:var(--hd)}
+.lg button:focus-visible{outline:2px solid var(--hd);border-radius:4px}
+
+.view{display:none}
+.view.on{display:block}
+.rl{margin-top:48px;font-size:15px;font-weight:700}
+.t1{margin-top:10px;font-weight:800;font-size:40px;line-height:1.05;color:var(--hd);letter-spacing:-.02em}
+.page-t{margin-top:44px}
+.sm{margin-top:16px;font-size:16px;max-width:560px}
+.sm+.sm{margin-top:12px}
+.hl{margin-top:26px;font-weight:800;font-size:19px;line-height:1.3;color:var(--hd);max-width:560px}
+
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:640px}
+.card{display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:14px;border:1.5px solid var(--hd);border-radius:12px;min-height:92px;font-weight:700;color:var(--hd);transition:background .15s,color .15s}
+.card .r{display:flex;justify-content:space-between;align-items:center;font-size:20px}
+.card .l{font-size:15px}
+
+.pj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
+.pc{background:var(--cd);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.pc.soon{background:transparent;border:1.5px dashed var(--hd)}
+.pc .tt{font-weight:800;font-size:18px;color:var(--hd);line-height:1.2}
+.pc .d{font-size:14px}
+.chip{align-self:flex-start;font-size:12px;font-weight:700;border:1.5px solid var(--hd);border-radius:99px;padding:1px 10px;color:var(--hd)}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1.5px solid var(--hd);border-radius:99px;font-weight:700;font-size:14px;color:var(--hd);transition:background .15s,color .15s;margin-top:6px;align-self:flex-start}
+
+.bb{display:none}
+
+@media(hover:hover){
+  .tile:hover,.card:hover,.pill:hover{background:var(--hb);color:var(--hf)}
+}
+
+/* Móvil */
+@media(max-width:640px){
+  body{padding-bottom:96px}
+  .wrap{padding:20px 18px 14px}
+  .nm{font-size:22px;-webkit-text-stroke:.8px var(--hd)}
+  .lk .tile{display:none}
+  .lg{margin-left:0}
+  .rl{margin-top:32px;font-size:14px}
+  .t1{font-size:25px}
+  .page-t{margin-top:32px}
+  .sm{font-size:15px}
+  .hl{font-size:17px;margin-top:22px}
+  .g3{gap:8px;margin-top:22px}
+  .card{border:0;background:var(--cd);border-radius:16px;min-height:76px;padding:12px 10px;gap:10px}
+  .card:active{background:var(--hb);color:var(--hf);transform:scale(.98)}
+  .card .r svg:nth-child(2){display:none}
+  .card .l{font-size:13px}
+  .pj{grid-template-columns:minmax(0,1fr)}
+  .pc,.pc.soon{border-radius:20px}
+  .pill{background:var(--cd);border:0;padding:12px 18px}
+  .pill:active{background:var(--hb);color:var(--hf)}
+  .bb{display:flex;justify-content:space-around;background:var(--cd);border-radius:99px;padding:6px;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+  .bb a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:11px;font-weight:700;color:var(--hd);padding:6px 12px;border-radius:99px;min-width:76px}
+  .bb a svg{font-size:20px}
+  .bb a[aria-current=page]{background:var(--hb);color:var(--hf)}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"/><path d="M3 7l9 6l9 -6"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0 -4 0"/><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/></symbol>
+  <symbol id="i-cv" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2"/><path d="M12 17v-6"/><path d="M9.5 14.5l2.5 2.5l2.5 -2.5"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4l0 12"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3"/><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3"/><path d="M14 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></symbol>
+  <symbol id="i-game" viewBox="0 0 24 24"><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4"/><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232"/><path d="M8 9v2"/><path d="M7 10h2"/><path d="M14 10h2"/></symbol>
+</svg>
+
+<div class="wrap">
+  <header class="nav">
+    <a href="#/" class="nm">Ignacio Hernández</a>
+    <nav class="lk" aria-label="Main">
+      <a href="#/projects" class="tile" data-route="projects" data-t="projects">Projects</a>
+      <a href="#/fun" class="tile" data-route="fun" data-t="fun">Fun stuff</a>
+      <span class="lg" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button> | <button type="button" data-lang="es" aria-pressed="false">ES</button></span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="view" id="v-home" data-view="home">
+      <p class="rl">Operations Manager · Madrid</p>
+      <h1 class="t1" data-t="h1">I turn complex, unstructured operations into systems that work.</h1>
+      <p class="sm" data-t="p1"></p>
+      <p class="sm" data-t="p1b"></p>
+      <p class="sm" data-t="p2"></p>
+      <p class="hl" data-t="hl"></p>
+      <div class="g3">
+        <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-mail"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">Email</span></a>
+        <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-linkedin"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">LinkedIn</span></a>
+        <a class="card" id="c-cv" href="cv/Ignacio_Hernandez_CV_EN.pdf" download><span class="r"><svg class="i"><use href="#i-cv"/></svg><svg class="i"><use href="#i-dl"/></svg></span><span class="l">CV</span></a>
+      </div>
+    </section>
+
+    <section class="view" id="v-projects" data-view="projects">
+      <h1 class="t1 page-t" data-t="projects">Projects</h1>
+      <div class="pj">
+        <article class="pc"><span class="chip" data-t="c1"></span><h2 class="tt" data-t="m1"></h2><p class="d" data-t="d1"></p></article>
+        <article class="pc soon"><span class="chip" data-t="c2"></span><h2 class="tt" data-t="m2"></h2><p class="d" data-t="d2"></p></article>
+      </div>
+    </section>
+
+    <section class="view" id="v-fun" data-view="fun">
+      <h1 class="t1 page-t" data-t="fun">Fun stuff</h1>
+      <p class="sm" data-t="fsub"></p>
+      <div class="pj">
+        <article class="pc">
+          <h2 class="tt" data-t="q"></h2>
+          <p class="d" data-t="qd"></p>
+          <a class="pill" href="https://nachoh23-lgtm.github.io/capitales-venezuela/" target="_blank" rel="noopener"><span data-t="play">Play</span><svg class="i"><use href="#i-out"/></svg></a>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<nav class="bb" aria-label="Main">
+  <a href="#/" data-route="home"><svg class="i"><use href="#i-home"/></svg><span data-t="home">Home</span></a>
+  <a href="#/projects" data-route="projects"><svg class="i"><use href="#i-rocket"/></svg><span data-t="projects">Projects</span></a>
+  <a href="#/fun" data-route="fun"><svg class="i"><use href="#i-game"/></svg><span data-t="fun">Fun stuff</span></a>
+</nav>
+
+<script>
+(function(){
+  // === EDITA ESTO: tu email, partido en dos para no dejarlo en claro en el HTML ===
+  var MAIL_USER = 'TU_USUARIO';          // parte antes de la @
+  var MAIL_HOST = 'gmail.com';           // parte después de la @
+
+  var T = {
+    en:{home:'Home',projects:'Projects',fun:'Fun stuff',
+      title:'Ignacio Hernández · Operations Manager',
+      h1:'I turn complex, unstructured operations into systems that work.',
+      p1:'I\'ve run operations in startups and through a merger, managed partner programs and onboarding at Microsoft, and restructured a family agribusiness remotely.',
+      p1b:'What I like most is finding where a process falls short: too slow, too manual, full of errors or not digital yet. Then I redesign it and choose the systems and tools that make it work, from projects to onboardings to support flows.',
+      p2:'Lately I\'m doing all of this with AI, and I\'m starting to apply it to small and medium businesses. If you have a process that needs fixing, let\'s talk.',
+      hl:'Before putting weeks or budget into an idea, I build a rough version with AI and see if it holds.',
+      c1:'In construction',m1:'Used-car marketplace for Venezuela',d1:'A modern marketplace for used cars: vehicle information, price history and inspections by verified workshops. Starting in Maracaibo.',
+      c2:'Idea · Coming soon',m2:'AI consulting',d2:'Helps small and medium businesses optimize and automate their processes, and choose the best tools for their workflows.',
+      fsub:'Small things I build for fun.',q:'Venezuelan Capitals Quiz',qd:'Guess the capital of every Venezuelan state. Solo or two players, two difficulty levels. (In Spanish)',play:'Play'},
+    es:{home:'Inicio',projects:'Proyectos',fun:'Fun stuff',
+      title:'Ignacio Hernández · Operations Manager',
+      h1:'Convierto operaciones complejas y desestructuradas en sistemas que funcionan.',
+      p1:'He llevado operaciones en startups y durante una fusión, gestionado programas de partners y onboarding en Microsoft, y reestructurado en remoto una empresa agropecuaria familiar.',
+      p1b:'Lo que más me gusta es encontrar dónde falla un proceso: demasiado lento, demasiado manual, con muchos errores o todavía sin digitalizar. Después lo rediseño y elijo los sistemas y herramientas que lo hacen funcionar, desde proyectos hasta onboardings y flujos de soporte.',
+      p2:'Últimamente hago todo esto con AI, y estoy empezando a aplicarlo a pequeñas y medianas empresas. Si tienes un proceso que arreglar, hablemos.',
+      hl:'Antes de invertir semanas o presupuesto en una idea, construyo una versión básica con AI y compruebo si se sostiene.',
+      c1:'En construcción',m1:'Marketplace de coches usados para Venezuela',d1:'Un marketplace moderno de coches usados: información del vehículo, historial de precios e inspecciones en talleres verificados. Empezando en Maracaibo.',
+      c2:'Idea · Próximamente',m2:'Consultoría AI',d2:'Ayuda a pequeñas y medianas empresas a optimizar y automatizar sus procesos y a elegir las mejores herramientas para sus flujos de trabajo.',
+      fsub:'Pequeñas cosas que construyo por diversión.',q:'Quiz de capitales de Venezuela',qd:'Adivina la capital de cada estado de Venezuela. Solo o en pareja, con dos niveles de dificultad.',play:'Jugar'}
+  };
+
+  var lang = 'en';
+  try{ var s = localStorage.getItem('lang'); if(s==='es'||s==='en') lang = s; }catch(e){}
+
+  function route(){
+    var h = (location.hash||'').replace(/^#\/?/,'');
+    return (h==='projects'||h==='fun') ? h : 'home';
+  }
+
+  function render(){
+    var t = T[lang], r = route();
+    document.documentElement.lang = lang;
+    document.title = t.title;
+    document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t[el.getAttribute('data-t')]; });
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view')===r); });
+    document.querySelectorAll('[data-route]').forEach(function(a){
+      if(a.getAttribute('data-route')===r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('[data-lang]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-lang')===lang)); });
+    document.getElementById('c-cv').setAttribute('href','cv/Ignacio_Hernandez_CV_'+lang.toUpperCase()+'.pdf');
+  }
+
+  // Email: abre Gmail con el destinatario, sin escribir la dirección en el HTML
+  document.getElementById('c-mail').addEventListener('click', function(e){
+    e.preventDefault();
+    var to = MAIL_USER + '@' + MAIL_HOST;
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to), '_blank', 'noopener');
+  });
+
+  document.querySelectorAll('[data-lang]').forEach(function(b){
+    b.addEventListener('click', function(){
+      lang = b.getAttribute('data-lang');
+      try{ localStorage.setItem('lang', lang); }catch(e){}
+      render();
+    });
+  });
+  window.addEventListener('hashchange', function(){ render(); window.scrollTo(0,0); });
+  render();
+})();
+</script>
+</body>
+</html>
