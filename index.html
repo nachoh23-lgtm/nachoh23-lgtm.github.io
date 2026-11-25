@@ -40,6 +40,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 .sm+.sm{margin-top:12px}
 .hl{margin-top:26px;font-weight:800;font-size:19px;line-height:1.3;color:var(--hd);max-width:560px}
 
+.ct{margin-top:28px;font-weight:800;font-size:15px;color:var(--hd)}
+.ct+.g3{margin-top:10px}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:640px}
 .card{display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:14px;border:1.5px solid var(--hd);border-radius:12px;min-height:92px;font-weight:700;color:var(--hd);transition:background .15s,color .15s}
 .card .r{display:flex;justify-content:space-between;align-items:center;font-size:20px}
@@ -73,8 +75,9 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
   .hl{font-size:17px;margin-top:22px}
   #v-home.on{display:flex;flex-direction:column}
   #v-home .t1{order:1}
-  #v-home .g3{order:2;gap:8px;margin-top:20px}
-  #v-home .sm,#v-home .hl{order:3}
+  #v-home .ct{order:2;margin-top:20px;font-size:14px}
+  #v-home .g3{order:3;gap:8px;margin-top:8px}
+  #v-home .sm,#v-home .hl{order:4}
   #v-home .sm:first-of-type{margin-top:26px}
   .g3{gap:8px;margin-top:22px}
   .card{border:0;background:var(--cd);border-radius:16px;min-height:76px;padding:12px 10px;gap:10px}
@@ -124,6 +127,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
       <p class="sm" data-t="p1b"></p>
       <p class="sm" data-t="p2"></p>
       <p class="hl" data-t="hl"></p>
+      <p class="ct" data-t="ct">Contact</p>
       <div class="g3">
         <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-mail"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">Email</span></a>
         <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-linkedin"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">LinkedIn</span></a>
@@ -172,6 +176,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
       p1:'I\'ve run operations in startups and through a merger, managed partner programs and onboarding at Microsoft, and restructured a family agribusiness remotely.',
       p1b:'What I like most is finding where a process falls short: too slow, too manual, full of errors or not digital yet. Then I redesign it and choose the systems and tools that make it work, from projects to onboardings to support flows.',
       p2:'Lately I\'m doing all of this with AI, and I\'m starting to apply it to small and medium businesses. If you have a process that needs fixing, let\'s talk.',
+      ct:'Contact',
       hl:'Before putting weeks or budget into an idea, I build a rough version with AI and see if it holds.',
       c1:'In construction',m1:'Used-car marketplace for Venezuela',d1:'A modern marketplace for used cars: vehicle information, price history and inspections by verified workshops. Starting in Maracaibo.',
       c2:'Idea · Coming soon',m2:'AI consulting',d2:'Helps small and medium businesses optimize and automate their processes, and choose the best tools for their workflows.',
@@ -182,6 +187,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
       p1:'He llevado operaciones en startups y durante una fusión, gestionado programas de partners y onboarding en Microsoft, y reestructurado en remoto una empresa agropecuaria familiar.',
       p1b:'Lo que más me gusta es encontrar dónde falla un proceso: demasiado lento, demasiado manual, con muchos errores o todavía sin digitalizar. Después lo rediseño y elijo los sistemas y herramientas que lo hacen funcionar, desde proyectos hasta onboardings y flujos de soporte.',
       p2:'Últimamente hago todo esto con AI, y estoy empezando a aplicarlo a pequeñas y medianas empresas. Si tienes un proceso que arreglar, hablemos.',
+      ct:'Contacto',
       hl:'Antes de invertir semanas o presupuesto en una idea, construyo una versión básica con AI y compruebo si se sostiene.',
       c1:'En construcción',m1:'Marketplace de coches usados para Venezuela',d1:'Un marketplace moderno de coches usados: información del vehículo, historial de precios e inspecciones en talleres verificados. Empezando en Maracaibo.',
       c2:'Idea · Próximamente',m2:'Consultoría AI',d2:'Ayuda a pequeñas y medianas empresas a optimizar y automatizar sus procesos y a elegir las mejores herramientas para sus flujos de trabajo.',
