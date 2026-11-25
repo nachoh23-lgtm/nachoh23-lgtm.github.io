@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ignacio Hernández · Operations Manager</title>
-<meta name="theme-color" content="#00274C">
+<meta name="theme-color" content="#12263C">
 <meta name="description" content="I turn complex, unstructured operations into systems that work.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -19,94 +19,100 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://nachoh23-lgtm.github.io/img/og.png">
 <style>
-@font-face{font-family:"Titan One";font-weight:400;font-display:swap;src:url(fonts/titan-one-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Bricolage Grotesque";font-weight:400;font-display:swap;src:url(fonts/bricolage-grotesque-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Bricolage Grotesque";font-weight:700;font-display:swap;src:url(fonts/bricolage-grotesque-latin-700-normal.woff2) format("woff2")}
-@font-face{font-family:"Bricolage Grotesque";font-weight:800;font-display:swap;src:url(fonts/bricolage-grotesque-latin-800-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-weight:400;font-display:swap;src:url(fonts/source-serif-4-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2")}
 
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--sb:#00274C;--hd:#FFCB05;--tx:#F1E9C6;--cd:#0A3466;--hb:#FFCB05;--hf:#00274C}
-html{background:var(--sb)}
-body{font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--sb);color:var(--tx);line-height:1.5;min-height:100vh}
+:root{--sb:#12263C;--hd:#FFCB05;--tx:#E7F0F9;--mu:#94AEC6;--ln:#314257;--cd:#1B3350;--hb:#FFCB05;--hf:#12263C;--fh:"Source Serif 4",Georgia,serif}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{background:var(--sb);color:var(--tx);font-family:Inter,system-ui,sans-serif;line-height:1.6}
 a{color:inherit;text-decoration:none}
-a:focus-visible{outline:2px solid var(--hd);outline-offset:3px;border-radius:6px}
-svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--hd);outline-offset:3px;border-radius:6px}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-.wrap{max-width:980px;margin:0 auto;padding:28px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.nm{display:inline-flex;align-items:center;gap:10px;font-family:"Titan One",system-ui,sans-serif;color:var(--hd);font-size:25px;line-height:1}
-.lg-mark{height:26px;width:auto;flex:none}
-.lk{display:flex;gap:10px;align-items:center}
-.tile{padding:8px 16px;border:1.5px solid var(--hd);border-radius:12px;font-weight:700;font-size:14px;color:var(--hd);transition:background .15s,color .15s}
+.hd{position:sticky;top:0;z-index:5;background:var(--sb);border-bottom:1px solid var(--ln)}
+.nav{max-width:960px;margin:0 auto;padding:14px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:inline-flex}
+.logo img{height:30px;width:auto}
+.lk{display:flex;align-items:center;gap:10px}
+.tile{font-size:14px;font-weight:600;padding:8px 18px;border:1.5px solid transparent;border-radius:99px;color:var(--mu);transition:background .15s,color .15s}
+.tile:hover{color:var(--hd)}
 .tile[aria-current=page]{background:var(--hb);color:var(--hf)}
-.lg{font-size:13px;font-weight:700;color:var(--tx);margin-left:6px;white-space:nowrap}
+.lg{font-size:13px;font-weight:500;color:var(--mu);margin-left:10px;white-space:nowrap}
 .lg button{font:inherit;color:inherit;background:none;border:0;padding:2px;cursor:pointer}
 .lg button[aria-pressed=true],.lg button:hover{color:var(--hd)}
-.lg button:focus-visible{outline:2px solid var(--hd);border-radius:4px}
 
-.view{display:none}
-.view.on{display:block}
-.rl{margin-top:48px;font-size:15px;font-weight:700}
-.t1{margin-top:10px;font-weight:800;font-size:40px;line-height:1.05;color:var(--hd);letter-spacing:-.02em}
-.page-t{margin-top:44px}
-.sm{margin-top:16px;font-size:16px;max-width:560px}
-.sm+.sm{margin-top:12px}
-.hl{margin-top:26px;font-weight:800;font-size:19px;line-height:1.3;color:var(--hd);max-width:560px}
+.wrap{max-width:960px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.view{display:block}
+#v-home{padding:clamp(72px,12vw,128px) 0 clamp(64px,9vw,104px)}
+#v-projects,#v-fun{border-top:1px solid var(--ln);padding:clamp(56px,8vw,96px) 0}
+#v-fun{padding-bottom:clamp(80px,10vw,128px)}
+.who{font-family:var(--fh);font-weight:600;font-size:30px;line-height:1.1;color:var(--hd)}
+.rl{margin-top:14px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.t1{margin-top:28px;font-family:var(--fh);font-weight:600;font-size:clamp(34px,5.2vw,56px);line-height:1.08;letter-spacing:-.015em;color:var(--hd);max-width:780px}
+.st{font-family:var(--fh);font-weight:600;font-size:clamp(30px,4vw,40px);line-height:1.1;color:var(--hd)}
+.sm{margin-top:16px;font-size:17px;line-height:1.7;max-width:600px}
+.t1+.sm{margin-top:32px}
+.hl{margin-top:40px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;color:var(--hd);max-width:600px}
+.ct{margin-top:56px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.2;color:var(--hd)}
 
-.ct{margin-top:28px;font-weight:800;font-size:15px;color:var(--hd)}
-.ct+.g3{margin-top:10px}
-.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:640px}
-.card{display:flex;flex-direction:column;justify-content:space-between;gap:18px;padding:14px;border:1.5px solid var(--hd);border-radius:12px;min-height:92px;font-weight:700;color:var(--hd);transition:background .15s,color .15s}
-.card .r{display:flex;justify-content:space-between;align-items:center;font-size:20px}
-.card .l{font-size:15px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px;max-width:720px}
+.card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:112px;padding:16px;border:1px solid var(--ln);border-radius:8px;font-weight:500;font-size:15px;color:var(--tx);transition:background .15s,color .15s,border-color .15s}
+.card svg.i{font-size:24px}
+.card:hover,.pill:hover{background:var(--hb);border-color:var(--hb);color:var(--hf)}
 
-.pj{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
-.pc{background:var(--cd);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.pj{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:40px}
+.st+.sm+.pj{margin-top:40px}
+.pc{background:var(--cd);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:10px}
 .pc.soon{background:transparent;border:1.5px dashed var(--hd)}
-.pc .tt{font-weight:800;font-size:18px;color:var(--hd);line-height:1.2}
-.pc .d{font-size:14px}
-.chip{align-self:flex-start;font-size:12px;font-weight:700;border:1.5px solid var(--hd);border-radius:99px;padding:1px 10px;color:var(--hd)}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1.5px solid var(--hd);border-radius:99px;font-weight:700;font-size:14px;color:var(--hd);transition:background .15s,color .15s;margin-top:6px;align-self:flex-start}
+.chip{align-self:flex-start;font-size:12px;font-weight:600;border:1.5px solid var(--hd);border-radius:99px;padding:1px 10px;color:var(--hd)}
+.tt{font-family:var(--fh);font-weight:600;font-size:21px;line-height:1.25;color:var(--hd)}
+.d{font-size:15px;line-height:1.65}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--hd);border-radius:99px;font-weight:600;font-size:14px;color:var(--hd);transition:background .15s,color .15s,border-color .15s;margin-top:8px;align-self:flex-start}
 
 .bb{display:none}
 
-@media(hover:hover){
-  .tile:hover,.card:hover,.pill:hover{background:var(--hb);color:var(--hf)}
-}
-
-/* Móvil */
+/* Móvil: una vista a la vez, barra inferior */
 @media(max-width:640px){
+  html{scroll-behavior:auto}
   body{padding-bottom:96px}
-  .wrap{padding:20px 18px 14px}
-  .nm{font-size:22px}
+  .hd{position:static;border-bottom:0}
+  .nav{padding:20px 18px 0}
+  .logo img{height:26px}
   .lk .tile{display:none}
   .lg{margin-left:0}
-  .rl{margin-top:32px;font-size:14px}
-  .t1{font-size:25px}
-  .page-t{margin-top:32px}
-  .sm{font-size:15px}
-  .hl{font-size:17px;margin-top:22px}
+  .wrap{padding:0 18px}
+  .view{display:none}
+  .view.on{display:block}
   #v-home.on{display:flex;flex-direction:column}
-  #v-home .t1{order:1}
-  #v-home .ct{order:2;margin-top:20px;font-size:14px}
-  #v-home .g3{order:3;gap:8px;margin-top:8px}
-  #v-home .sm,#v-home .hl{order:4}
-  #v-home .sm:first-of-type{margin-top:26px}
-  .g3{gap:8px;margin-top:22px}
-  .card{border:0;background:var(--cd);border-radius:16px;min-height:76px;padding:12px 10px;gap:10px}
-  .card:active{background:var(--hb);color:var(--hf);transform:scale(.98)}
-  .card .r svg:nth-child(2){display:none}
-  .card .l{font-size:13px}
-  .pj{grid-template-columns:minmax(0,1fr)}
-  .pc,.pc.soon{border-radius:20px}
-  .pill{background:var(--cd);border:0;padding:12px 18px}
-  .pill:active{background:var(--hb);color:var(--hf)}
-  .bb{display:flex;justify-content:space-around;background:var(--cd);border-radius:99px;padding:6px;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;box-shadow:0 6px 20px rgba(0,0,0,.35)}
-  .bb a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:11px;font-weight:700;color:var(--hd);padding:6px 12px;border-radius:99px;min-width:76px}
+  #v-home>*{order:6}
+  #v-home .who{order:1}#v-home .rl{order:2}#v-home .t1{order:3}#v-home .ct{order:4;margin-top:24px}#v-home .g3{order:5}
+  #v-home{padding:36px 0 24px}
+  #v-projects,#v-fun{border-top:0;padding:36px 0 24px}
+  .who{font-size:24px}
+  .rl{margin-top:10px;font-size:12px}
+  .t1{margin-top:20px;font-size:30px}
+  .st{font-size:30px}
+  .sm{font-size:16px;margin-top:14px}
+  .t1+.sm{margin-top:14px}
+  #v-home .sm:first-of-type,#v-home .g3+.sm{margin-top:28px}
+  .hl{font-size:20px;margin-top:32px}
+  .ct{margin-top:28px;font-size:20px}
+  .g3{gap:8px;margin-top:10px}
+  .card{min-height:88px;padding:12px 8px;font-size:13px;gap:8px}
+  .card svg.i{font-size:22px}
+  .pj{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:24px}
+  .pc,.pc.soon{border-radius:20px;padding:18px}
+  .card:active,.pill:active{background:var(--hb);color:var(--hf)}
+  .bb{display:flex;justify-content:space-around;background:var(--cd);border:1px solid var(--ln);border-radius:99px;padding:6px;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+  .bb a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:11px;font-weight:500;color:var(--mu);padding:6px 12px;border-radius:99px;min-width:76px}
   .bb a svg{font-size:20px}
   .bb a[aria-current=page]{background:var(--hb);color:var(--hf)}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -122,46 +128,49 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
   <symbol id="i-game" viewBox="0 0 24 24"><path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4"/><path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232"/><path d="M8 9v2"/><path d="M7 10h2"/><path d="M14 10h2"/></symbol>
 </svg>
 
-<div class="wrap">
-  <header class="nav">
-    <a href="#/" class="nm"><img src="img/logo.png" alt="" class="lg-mark" width="41" height="26">Ignacio Hernández</a>
+<header class="hd">
+  <div class="nav">
+    <a href="#/" class="logo" data-route-link="home" aria-label="Home"><img src="img/logo.png" alt="IHC" width="48" height="30"></a>
     <nav class="lk" aria-label="Main">
       <a href="#/projects" class="tile" data-route="projects" data-t="projects">Projects</a>
       <a href="#/fun" class="tile" data-route="fun" data-t="fun">Fun stuff</a>
       <span class="lg" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button> | <button type="button" data-lang="es" aria-pressed="false">ES</button></span>
     </nav>
-  </header>
+  </div>
+</header>
 
+<div class="wrap">
   <main>
     <section class="view" id="v-home" data-view="home">
+      <p class="who">Ignacio Hernández</p>
       <p class="rl">Operations Manager · Madrid</p>
       <h1 class="t1" data-t="h1">I turn complex, unstructured operations into systems that work.</h1>
       <p class="sm" data-t="p1"></p>
       <p class="sm" data-t="p1b"></p>
       <p class="sm" data-t="p2"></p>
       <p class="hl" data-t="hl"></p>
-      <p class="ct" data-t="ct">Contact</p>
+      <h2 class="ct" data-t="ct">Contact</h2>
       <div class="g3">
-        <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-mail"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">Email</span></a>
-        <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><span class="r"><svg class="i"><use href="#i-linkedin"/></svg><svg class="i"><use href="#i-out"/></svg></span><span class="l">LinkedIn</span></a>
-        <a class="card" id="c-cv" href="cv/Ignacio_Hernandez_CV_EN.pdf" download><span class="r"><svg class="i"><use href="#i-cv"/></svg><svg class="i"><use href="#i-dl"/></svg></span><span class="l">CV</span></a>
+        <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-mail"/></svg><span>Email</span></a>
+        <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
+        <a class="card" id="c-cv" href="cv/Ignacio_Hernandez_CV_EN.pdf" download><svg class="i"><use href="#i-cv"/></svg><span>CV</span></a>
       </div>
     </section>
 
     <section class="view" id="v-projects" data-view="projects">
-      <h1 class="t1 page-t" data-t="projects">Projects</h1>
+      <h2 class="st" data-t="projects">Projects</h2>
       <div class="pj">
-        <article class="pc"><span class="chip" data-t="c1"></span><h2 class="tt" data-t="m1"></h2><p class="d" data-t="d1"></p></article>
-        <article class="pc soon"><span class="chip" data-t="c2"></span><h2 class="tt" data-t="m2"></h2><p class="d" data-t="d2"></p></article>
+        <article class="pc"><span class="chip" data-t="c1"></span><h3 class="tt" data-t="m1"></h3><p class="d" data-t="d1"></p></article>
+        <article class="pc soon"><span class="chip" data-t="c2"></span><h3 class="tt" data-t="m2"></h3><p class="d" data-t="d2"></p></article>
       </div>
     </section>
 
     <section class="view" id="v-fun" data-view="fun">
-      <h1 class="t1 page-t" data-t="fun">Fun stuff</h1>
+      <h2 class="st" data-t="fun">Fun stuff</h2>
       <p class="sm" data-t="fsub"></p>
       <div class="pj">
         <article class="pc">
-          <h2 class="tt" data-t="q"></h2>
+          <h3 class="tt" data-t="q"></h3>
           <p class="d" data-t="qd"></p>
           <a class="pill" href="https://nachoh23-lgtm.github.io/capitales-venezuela/" target="_blank" rel="noopener"><span data-t="play">Play</span><svg class="i"><use href="#i-out"/></svg></a>
         </article>
@@ -210,23 +219,57 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
   var lang = 'en';
   try{ var s = localStorage.getItem('lang'); if(s==='es'||s==='en') lang = s; }catch(e){}
 
-  function route(){
+  var mq = window.matchMedia('(max-width:640px)');
+  var active = 'home';
+
+  function hashRoute(){
     var h = (location.hash||'').replace(/^#\/?/,'');
     return (h==='projects'||h==='fun') ? h : 'home';
   }
 
-  function render(){
-    var t = T[lang], r = route();
-    document.documentElement.lang = lang;
-    document.title = t.title;
-    document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t[el.getAttribute('data-t')]; });
-    document.querySelectorAll('.view').forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view')===r); });
+  function setActive(r){
+    active = r;
     document.querySelectorAll('[data-route]').forEach(function(a){
       if(a.getAttribute('data-route')===r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
+    document.querySelectorAll('.view').forEach(function(v){ v.classList.toggle('on', v.getAttribute('data-view')===r); });
+  }
+
+  function render(){
+    var t = T[lang];
+    document.documentElement.lang = lang;
+    document.title = t.title;
+    document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t[el.getAttribute('data-t')]; });
     document.querySelectorAll('[data-lang]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-lang')===lang)); });
     document.getElementById('c-cv').setAttribute('href','cv/Ignacio_Hernandez_CV_'+lang.toUpperCase()+'.pdf');
   }
+
+  // Escritorio: una sola página con scroll; móvil: una vista a la vez
+  function goTo(r){
+    if(mq.matches){ setActive(r); window.scrollTo(0,0); return; }
+    var el = document.getElementById(r==='home' ? 'v-home' : 'v-'+r);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+    setActive(r);
+  }
+
+  function spy(){
+    if(mq.matches) return;
+    var p = document.getElementById('v-projects').getBoundingClientRect().top;
+    var f = document.getElementById('v-fun').getBoundingClientRect().top;
+    var line = window.innerHeight*0.4;
+    var atEnd = (window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 4;
+    var r = (f <= line || atEnd) ? 'fun' : (p <= line ? 'projects' : 'home');
+    if(r !== active) setActive(r);
+  }
+
+  document.querySelectorAll('a[data-route], a[data-route-link]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var r = a.getAttribute('data-route') || a.getAttribute('data-route-link');
+      e.preventDefault();
+      try{ history.replaceState(null,'', r==='home' ? location.pathname : '#/'+r); }catch(_){}
+      goTo(r);
+    });
+  });
 
   // Email: abre Gmail con el destinatario, sin escribir la dirección en el HTML
   document.getElementById('c-mail').addEventListener('click', function(e){
@@ -242,8 +285,15 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
       render();
     });
   });
-  window.addEventListener('hashchange', function(){ render(); window.scrollTo(0,0); });
+
+  window.addEventListener('scroll', spy, {passive:true});
+  window.addEventListener('hashchange', function(){ goTo(hashRoute()); });
+  (mq.addEventListener ? mq.addEventListener('change', function(){ setActive(mq.matches ? hashRoute() : active); spy(); }) : null);
+
   render();
+  var first = hashRoute();
+  setActive(first);
+  if(!mq.matches && first!=='home'){ setTimeout(function(){ goTo(first); }, 50); } else { spy(); }
 })();
 </script>
 </body>
