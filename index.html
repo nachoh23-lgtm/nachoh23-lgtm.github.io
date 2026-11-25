@@ -34,7 +34,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 
 .wrap{max-width:980px;margin:0 auto;padding:28px}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.nm{font-family:"Titan One",system-ui,sans-serif;color:var(--hd);font-size:25px;line-height:1}
+.nm{display:inline-flex;align-items:center;gap:10px;font-family:"Titan One",system-ui,sans-serif;color:var(--hd);font-size:25px;line-height:1}
+.lg-mark{height:26px;width:auto;flex:none}
 .lk{display:flex;gap:10px;align-items:center}
 .tile{padding:8px 16px;border:1.5px solid var(--hd);border-radius:12px;font-weight:700;font-size:14px;color:var(--hd);transition:background .15s,color .15s}
 .tile[aria-current=page]{background:var(--hb);color:var(--hf)}
@@ -123,7 +124,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-l
 
 <div class="wrap">
   <header class="nav">
-    <a href="#/" class="nm">Ignacio Hernández</a>
+    <a href="#/" class="nm"><img src="img/logo.png" alt="" class="lg-mark" width="41" height="26">Ignacio Hernández</a>
     <nav class="lk" aria-label="Main">
       <a href="#/projects" class="tile" data-route="projects" data-t="projects">Projects</a>
       <a href="#/fun" class="tile" data-route="fun" data-t="fun">Fun stuff</a>
