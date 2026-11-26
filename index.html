@@ -49,7 +49,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .view{display:block}
 #v-home{padding:clamp(72px,12vw,128px) 0 clamp(64px,9vw,104px)}
 #v-projects,#v-fun{padding:clamp(56px,8vw,96px) 0}
-#v-fun{padding-bottom:clamp(80px,10vw,128px)}
+#v-fun{padding-bottom:clamp(56px,7vw,80px)}
 .who{font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.1;color:var(--tx)}
 .upd{margin-top:8px;font-size:14px;color:var(--mu)}
 .t1{margin-top:32px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;letter-spacing:-.01em;color:var(--hd);max-width:780px}
@@ -78,6 +78,18 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .tt{font-family:var(--fh);font-weight:600;font-size:21px;line-height:1.25;color:var(--hd)}
 .d{font-size:15px;line-height:1.65}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1.5px solid var(--hd);border-radius:99px;font-weight:600;font-size:14px;color:var(--hd);transition:background .15s,color .15s,border-color .15s;margin-top:8px;align-self:flex-start}
+
+.ft{display:flex;align-items:center;padding:0 0 48px;color:var(--mu);font-size:14px}
+.ft svg{flex:none}
+.f{transform-origin:18px 15px;animation:br 4s ease-in-out infinite}
+@keyframes br{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.bl{transform-origin:18px 14px;animation:bk 4.5s infinite}
+@keyframes bk{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.lk{animation:lk 6s ease-in-out infinite}
+@keyframes lk{0%,30%,100%{transform:translateX(0)}40%,60%{transform:translateX(1.4px)}70%,85%{transform:translateX(-1.4px)}}
+.z{font:500 7px Inter,sans-serif;fill:#94AEC6;opacity:0;animation:zz 3.2s ease-in infinite}
+.z2{font-size:9px;animation-delay:1.4s}
+@keyframes zz{0%{opacity:0;transform:translate(0,4px)}25%{opacity:.9}100%{opacity:0;transform:translate(4px,-6px)}}
 
 .bb{display:none}
 
@@ -116,10 +128,12 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .card:active,.pill:active{background:var(--hb);color:var(--hf)}
   .bb{display:flex;gap:4px;background:rgba(27,51,80,.10);-webkit-backdrop-filter:blur(28px) saturate(1.5);backdrop-filter:blur(28px) saturate(1.5);border:1px solid rgba(231,240,249,.13);border-radius:99px;padding:5px;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;box-shadow:0 8px 24px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.13)}
   .bb a{text-shadow:0 1px 8px rgba(8,20,34,.7);flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:12px;font-weight:500;color:var(--tx);padding:6px 8px;border-radius:99px;min-height:48px}
+  .ft{margin-top:4px}
+  body:not([data-view=home]) .ft{display:none}
   .bb a svg{font-size:20px}
   .bb a[aria-current=page]{background:var(--hb);color:var(--hf);text-shadow:none}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.f,.bl,.lk,.z{animation:none!important}.z{opacity:.8}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -190,6 +204,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       </div>
     </section>
   </main>
+  <footer class="ft"><span id="ck-t"></span><svg id="ck-n" width="44" height="30" viewBox="0 0 44 30" aria-hidden="true" style="display:none"><g class="f"><path d="M8 9Q4 15 8 21M28 9Q32 15 28 21" fill="none" stroke="#94AEC6" stroke-width="1.6" stroke-linecap="round"/><path d="M11 14.5h5M20 14.5h5" fill="none" stroke="#94AEC6" stroke-width="1.6" stroke-linecap="round"/></g><text class="z" x="30" y="9">z</text><text class="z z2" x="34" y="6">Z</text></svg><svg id="ck-d" width="44" height="30" viewBox="0 0 44 30" aria-hidden="true" style="display:none"><g class="f"><path d="M8 9Q4 15 8 21M28 9Q32 15 28 21" fill="none" stroke="#94AEC6" stroke-width="1.6" stroke-linecap="round"/><g class="lk"><g class="bl"><circle cx="13.5" cy="14" r="1.7" fill="#94AEC6"/><circle cx="22.5" cy="14" r="1.7" fill="#94AEC6"/></g><path d="M15.5 19Q18 21.4 20.5 19" fill="none" stroke="#94AEC6" stroke-width="1.5" stroke-linecap="round"/></g></g></svg></footer>
 </div>
 
 <nav class="bb" aria-label="Main">
@@ -242,6 +257,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
   function setActive(r){
     active = r;
+    document.body.setAttribute('data-view', r);
     document.querySelectorAll('[data-route]').forEach(function(a){
       if(a.getAttribute('data-route')===r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
@@ -255,6 +271,17 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent = t[el.getAttribute('data-t')]; });
     document.querySelectorAll('[data-lang]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-lang')===lang)); });
     document.getElementById('c-cv').setAttribute('href','cv/Ignacio_Hernandez_CV_'+lang.toUpperCase()+'.pdf');
+    clock();
+  }
+
+
+  function clock(){
+    var pp = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',hour:'numeric',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var h = (+pp.filter(function(p){return p.type==='hour'})[0].value)%24, m = pp.filter(function(p){return p.type==='minute'})[0].value;
+    var night = h>=23 || h<8, h12 = h%12||12, ap = h<12?'am':'pm';
+    document.getElementById('ck-t').textContent = lang==='es' ? h12+':'+m+' '+ap+' en Madrid, España' : h12+':'+m+ap+' in Madrid, Spain';
+    document.getElementById('ck-n').style.display = night ? 'block' : 'none';
+    document.getElementById('ck-d').style.display = night ? 'none' : 'block';
   }
 
   // Escritorio: una sola página con scroll; móvil: una vista a la vez
@@ -309,6 +336,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   (mq.addEventListener ? mq.addEventListener('change', function(){ setActive(mq.matches ? hashRoute() : active); spy(); }) : null);
 
   render();
+  setInterval(clock, 30000);
   var first = hashRoute();
   setActive(first);
   if(!mq.matches && first!=='home'){ setTimeout(function(){ goTo(first); }, 50); } else { spy(); }
