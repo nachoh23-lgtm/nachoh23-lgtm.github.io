@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ignacio Hernández · Operations Manager</title>
+<title>Ignacio Hernández</title>
 <meta name="theme-color" content="#12263C">
 <meta name="description" content="I turn complex, unstructured operations into systems that work.">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ignacio Hernández · Operations Manager">
+<meta property="og:title" content="Ignacio Hernández">
 <meta property="og:description" content="I turn complex, unstructured operations into systems that work.">
 <meta property="og:url" content="https://nachoh23-lgtm.github.io/">
-<meta property="og:image" content="https://nachoh23-lgtm.github.io/img/og.png?v=2">
+<meta property="og:image" content="https://nachoh23-lgtm.github.io/img/og.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nachoh23-lgtm.github.io/img/og.png?v=2">
+<meta name="twitter:image" content="https://nachoh23-lgtm.github.io/img/og.png?v=3">
 <style>
 @font-face{font-family:"Source Serif 4";font-weight:400;font-display:swap;src:url(fonts/source-serif-4-latin-400-normal.woff2) format("woff2")}
 @font-face{font-family:"Source Serif 4";font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-normal.woff2) format("woff2")}
@@ -38,34 +38,34 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .logo{display:inline-flex}
 .logo img{height:30px;width:auto}
 .lk{display:flex;align-items:center;gap:10px}
-.tile{font-size:14px;font-weight:600;padding:8px 18px;border:1.5px solid transparent;border-radius:99px;color:var(--mu);transition:background .15s,color .15s}
+.tile{font-size:14px;font-weight:500;padding:8px 4px;margin:0 10px;border-bottom:2px solid transparent;color:var(--mu);transition:color .15s,border-color .15s}
 .tile:hover{color:var(--hd)}
-.tile[aria-current=page]{background:var(--hb);color:var(--hf)}
-.lg{font-size:13px;font-weight:500;color:var(--mu);margin-left:10px;white-space:nowrap}
+.tile[aria-current=page]{color:var(--hd);border-bottom-color:var(--hd)}
+.lg{font-size:14px;font-weight:500;color:var(--mu);margin-left:10px;white-space:nowrap}
 .lg button{font:inherit;color:inherit;background:none;border:0;padding:2px;cursor:pointer}
 .lg button[aria-pressed=true],.lg button:hover{color:var(--hd)}
 
 .wrap{max-width:960px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
 .view{display:block}
 #v-home{padding:clamp(72px,12vw,128px) 0 clamp(64px,9vw,104px)}
-#v-projects,#v-fun{border-top:1px solid var(--ln);padding:clamp(56px,8vw,96px) 0}
+#v-projects,#v-fun{padding:clamp(56px,8vw,96px) 0}
 #v-fun{padding-bottom:clamp(80px,10vw,128px)}
-.who{font-family:var(--fh);font-weight:600;font-size:30px;line-height:1.1;color:var(--hd)}
-.rl{margin-top:14px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
-.t1{margin-top:28px;font-family:var(--fh);font-weight:600;font-size:clamp(34px,5.2vw,56px);line-height:1.08;letter-spacing:-.015em;color:var(--hd);max-width:780px}
-.st{font-family:var(--fh);font-weight:600;font-size:clamp(30px,4vw,40px);line-height:1.1;color:var(--hd)}
+.who{font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.1;color:var(--tx)}
+.upd{margin-top:8px;font-size:14px;color:var(--mu)}
+.t1{margin-top:32px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;letter-spacing:-.01em;color:var(--hd);max-width:780px}
+.st{font-family:var(--fh);font-weight:600;font-size:clamp(30px,4vw,40px);line-height:1.1;color:var(--tx)}
 .sm{margin-top:16px;font-size:17px;line-height:1.7;max-width:600px}
-.t1+.sm{margin-top:32px}
-.hl{margin-top:36px;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.35;color:var(--hd);max-width:600px}
-.lb{margin:0 0 14px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
-.blk{margin-top:56px;border-top:1px solid var(--ln);padding-top:56px}
-#v-home .t1+.blk,#v-home .rl+.blk{margin-top:56px}
-.blk .sm:first-of-type{margin-top:0}
-.cbtn{font:inherit;font-size:14px;font-weight:600;color:var(--hd);background:none;border:1.5px solid var(--hd);border-radius:99px;padding:7px 16px;cursor:pointer;transition:background .15s,color .15s}
+#v-home .sm{font-size:16px;margin-top:16px}
+#v-home .t1+.sm{margin-top:14px}
+#v-home .sm.p1{margin-top:18px}
+#v-home .sm.p3{font-style:italic}
+.lb{margin:26px 0 0;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
+.lb+.sm{margin-top:12px!important}
+.cbtn{font:inherit;font-size:14px;font-weight:500;color:var(--hd);background:none;border:1.5px solid var(--hd);border-radius:99px;padding:7px 16px;cursor:pointer;transition:background .15s,color .15s}
 .cbtn:hover{background:var(--hb);color:var(--hf)}
-.ct{margin:0;font-family:var(--fh);font-weight:600;font-size:22px;line-height:1.2;color:var(--tx)}
+.cl{margin:28px 0 0;font-size:16px;font-weight:600;line-height:1.7}
 
-.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px;max-width:720px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px;max-width:720px}
 .card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:112px;padding:16px;border:1px solid var(--ln);border-radius:8px;font-weight:500;font-size:15px;color:var(--tx);transition:background .15s,color .15s,border-color .15s}
 .card svg.i{font-size:24px}
 .card:hover,.pill:hover{background:var(--hb);border-color:var(--hb);color:var(--hf)}
@@ -95,27 +95,27 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .view{display:none}
   .view.on{display:block}
   #v-home{padding:36px 0 24px}
-  #v-projects,#v-fun{border-top:0;padding:36px 0 24px}
-  .who{font-size:24px}
-  .rl{margin-top:10px;font-size:12px}
-  .t1{margin-top:20px;font-size:28px;line-height:1.12}
+  #v-projects,#v-fun{padding:36px 0 24px}
+  .who{font-size:20px}
+  .upd{margin-top:6px;font-size:13px}
+  .t1{margin-top:26px;font-size:16px;line-height:1.5}
   .st{font-size:30px}
   .sm{font-size:16px;margin-top:14px}
-  .t1+.sm{margin-top:14px}
-  .blk{margin-top:30px;padding-top:30px}
-  .lb{font-size:12px;margin-bottom:8px}
-  #v-home .t1+.blk{margin-top:44px;border-top:0;padding-top:0}
-  .cbtn{font-size:13px;padding:6px 14px}
-  .hl{font-size:20px;margin-top:28px}
-  .ct{font-size:20px}
-  .g3{gap:8px;margin-top:14px}
+  #v-home .sm{font-size:15px;line-height:1.65;margin-top:14px}
+  #v-home .t1+.sm{margin-top:12px}
+  #v-home .sm.p1{margin-top:14px}
+  .lb{margin-top:20px}
+  .lb+.sm{margin-top:10px!important}
+  .cbtn{padding:6px 14px}
+  .cl{margin-top:20px;font-size:15px}
+  .g3{gap:8px;margin-top:12px}
   .card{min-height:88px;padding:12px 8px;font-size:13px;gap:8px}
   .card svg.i{font-size:22px}
   .pj{grid-template-columns:minmax(0,1fr);gap:12px;margin-top:24px}
   .pc,.pc.soon{border-radius:20px;padding:18px}
   .card:active,.pill:active{background:var(--hb);color:var(--hf)}
   .bb{display:flex;gap:4px;background:rgba(27,51,80,.26);-webkit-backdrop-filter:blur(28px) saturate(1.8);backdrop-filter:blur(28px) saturate(1.8);border:1px solid rgba(231,240,249,.16);border-radius:99px;padding:5px;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));max-width:480px;margin:0 auto;box-shadow:0 8px 24px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.12)}
-  .bb a{text-shadow:0 1px 8px rgba(8,20,34,.7);flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:11px;font-weight:500;color:var(--mu);padding:6px 8px;border-radius:99px;min-height:48px}
+  .bb a{text-shadow:0 1px 8px rgba(8,20,34,.7);flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:12px;font-weight:500;color:var(--mu);padding:6px 8px;border-radius:99px;min-height:48px}
   .bb a svg{font-size:20px}
   .bb a[aria-current=page]{background:var(--hb);color:var(--hf);text-shadow:none}
 }
@@ -151,20 +151,16 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   <main>
     <section class="view" id="v-home" data-view="home">
       <p class="who">Ignacio Hernández</p>
-      <p class="rl">Operations Manager · Madrid</p>
+      <p class="upd" data-t="upd"></p>
       <h1 class="t1" data-t="h1"></h1>
-      <div class="blk" id="exp">
-        <h2 class="lb" data-t="lb1"></h2>
-        <p class="sm" data-t="p1"></p>
-      </div>
-      <div class="blk" id="how">
-        <h2 class="lb" data-t="lb2"></h2>
-        <p class="sm" data-t="p1b"></p>
-        <p class="sm" data-t="p2"></p>
-        <p class="hl" data-t="hl"></p>
-      </div>
-      <div class="blk" id="contact">
-        <h2 class="ct" data-t="ct">Contact</h2>
+      <p class="sm" data-t="born"></p>
+      <p class="sm p1" data-t="p1"></p>
+      <h2 class="lb" data-t="lb2"></h2>
+      <p class="sm" data-t="p1b"></p>
+      <p class="sm" data-t="p2"></p>
+      <p class="sm p3" data-t="p3"></p>
+      <div id="contact">
+        <p class="cl" data-t="cl"></p>
         <div class="g3">
           <a class="card" id="c-mail" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-mail"/></svg><span>Email</span></a>
           <a class="card" href="https://www.linkedin.com/in/ignaciohc" target="_blank" rel="noopener"><svg class="i"><use href="#i-linkedin"/></svg><span>LinkedIn</span></a>
@@ -175,6 +171,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
     <section class="view" id="v-projects" data-view="projects">
       <h2 class="st" data-t="projects">Projects</h2>
+      <p class="sm" data-t="psub"></p>
       <div class="pj">
         <article class="pc"><span class="chip" data-t="c1"></span><h3 class="tt" data-t="m1"></h3><p class="d" data-t="d1"></p></article>
         <article class="pc soon"><span class="chip" data-t="c2"></span><h3 class="tt" data-t="m2"></h3><p class="d" data-t="d2"></p></article>
@@ -209,27 +206,27 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
   var T = {
     en:{home:'Home',projects:'Projects',fun:'Fun stuff',
-      title:'Ignacio Hernández · Operations Manager',
-      h1:'I turn complex, unstructured operations into systems that work.',
-      p1:'I\'ve led operations in startups, including the integration after a merger between two of them. I\'ve also managed partner programs and onboarding at Microsoft, and remotely restructured a family agricultural business.',
-      p1b:'What I enjoy most is finding where a process falls short: too slow, too manual, full of errors or not yet digitized. Then I redesign it and choose the systems and tools that make it work better, from projects to onboardings to support flows.',
-      p2:'With that experience, I\'m now starting to use AI to make processes more efficient, and I want to bring that to small and medium-sized businesses.',
-      ct:'Contact', lb1:'Experience', lb2:'How I work',
-      hl:'Before putting weeks or budget into an idea, I build a rough version with AI and see if it holds.',
-      c1:'In construction',m1:'Used-car marketplace for Venezuela',d1:'A modern marketplace for used cars: vehicle information, price history and inspections by verified workshops. Starting in Maracaibo.',
-      c2:'Idea · Coming soon',m2:'AI consulting',d2:'Helps small and medium businesses optimize and automate their processes, and choose the best tools for their workflows.',
-      fsub:'Small things I build for fun.',q:'Venezuelan Capitals Quiz',qd:'Guess the capital of every Venezuelan state. Solo or two players, two difficulty levels. (In Spanish)',play:'Play'},
+    title:'Ignacio Hernández',
+     h1:'I turn complex, unstructured operations into systems that work.',
+     p1:'I\'ve led operations at startups, including post-merger integration, managed a partner program and onboarding at Microsoft, and driven the remote restructuring of a family-owned agricultural business.',
+     p1b:'I enjoy finding where processes break down and redesigning them with the right systems and tools. I now use AI to document, prototype and automate solutions.',
+     p2:'I want to help small and medium-sized businesses improve their operations, starting with the problems that matter most.',
+     p3:'Before investing time or money in an idea, I prefer to build a basic version and test it.',
+     ct:'Contact',lb2:'How I work',born:'I was born in Maracaibo and have lived in Madrid since 2015.',upd:'Updated Nov 26, 2026',cl:'You can find me or reach me here.',
+     c1:'In construction',m1:'Used-car marketplace for Venezuela',d1:'A modern marketplace for used cars: vehicle information, price history and inspections by verified workshops. Starting in Maracaibo.',
+     c2:'Idea · Coming soon',m2:'AI consulting',d2:'Helps small and medium businesses optimize and automate their processes, and choose the best tools for their workflows.',
+     psub:'Past, current and upcoming projects.',fsub:'Small things I build for fun.',q:'Venezuelan Capitals Quiz',qd:'Guess the capital of every Venezuelan state. Solo or two players, two difficulty levels. (In Spanish)',play:'Play'},
     es:{home:'Inicio',projects:'Proyectos',fun:'Fun stuff',
-      title:'Ignacio Hernández · Operations Manager',
-      h1:'Convierto operaciones complejas en sistemas que funcionan.',
-      p1:'He liderado operaciones en startups, incluida la integración tras la fusión de dos de ellas. También he gestionado programas de partners y onboarding en Microsoft, y reestructurado en remoto una empresa agropecuaria familiar.',
-      p1b:'Lo que más disfruto es encontrar dónde falla un proceso: demasiado lento, demasiado manual, con muchos errores o todavía sin digitalizar. Después lo rediseño y elijo los sistemas y herramientas que lo hagan funcionar mejor, desde proyectos hasta onboardings y flujos de soporte.',
-      p2:'Con esa experiencia, ahora estoy empezando a usar la IA para hacer los procesos más eficientes, y quiero llevarlo a pequeñas y medianas empresas.',
-      ct:'Contacto', lb1:'Experiencia', lb2:'Cómo trabajo',
-      hl:'Antes de invertir semanas o dinero en una idea, construyo una versión básica con IA y compruebo si se sostiene.',
-      c1:'En construcción',m1:'Marketplace de coches usados para Venezuela',d1:'Un marketplace moderno de coches usados: información del vehículo, historial de precios e inspecciones en talleres verificados. Empezando en Maracaibo.',
-      c2:'Idea · Próximamente',m2:'Consultoría IA',d2:'Ayuda a pequeñas y medianas empresas a optimizar y automatizar sus procesos y a elegir las mejores herramientas para sus flujos de trabajo.',
-      fsub:'Pequeñas cosas que construyo por diversión.',q:'Quiz de capitales de Venezuela',qd:'Adivina la capital de cada estado de Venezuela. Solo o en pareja, con dos niveles de dificultad.',play:'Jugar'}
+    title:'Ignacio Hernández',
+     h1:'Convierto operaciones complejas en sistemas que funcionan.',
+     p1:'He liderado operaciones en startups, incluida la integración tras una fusión. También gestioné un programa de partners y onboarding en Microsoft, e impulsé en remoto la reestructuración de una empresa agropecuaria familiar.',
+     p1b:'Me gusta encontrar dónde falla un proceso y rediseñarlo con los sistemas y herramientas adecuados. Ahora utilizo la IA para documentar, prototipar y automatizar soluciones.',
+     p2:'Quiero ayudar a pequeñas y medianas empresas a mejorar sus operaciones, empezando por los problemas que más impacto tienen.',
+     p3:'Antes de invertir tiempo o dinero en una idea, prefiero construir una versión básica y ponerla a prueba.',
+     ct:'Contacto',lb2:'Cómo trabajo',born:'Nací en Maracaibo y vivo en Madrid desde 2015.',upd:'Actualizado el 26 nov 2026',cl:'Encuéntrame o escríbeme aquí.',
+     c1:'En construcción',m1:'Marketplace de coches usados para Venezuela',d1:'Un marketplace moderno de coches usados: información del vehículo, historial de precios e inspecciones en talleres verificados. Empezando en Maracaibo.',
+     c2:'Idea · Próximamente',m2:'Consultoría IA',d2:'Ayuda a pequeñas y medianas empresas a optimizar y automatizar sus procesos y a elegir las mejores herramientas para sus flujos de trabajo.',
+     psub:'Proyectos pasados, actuales y futuros.',fsub:'Pequeñas cosas que construyo por diversión.',q:'Quiz de capitales de Venezuela',qd:'Adivina la capital de cada estado de Venezuela. Solo o en pareja, con dos niveles de dificultad.',play:'Jugar'}
   };
 
   var lang = 'en';
