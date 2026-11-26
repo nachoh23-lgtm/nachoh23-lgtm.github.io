@@ -60,7 +60,15 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 #v-home .sm.p1{margin-top:18px}
 #v-home .sm.p3{font-style:italic}
 .lb{margin:26px 0 0;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mu)}
-.lb+.sm{margin-top:12px!important}
+.fx .fi{position:relative;margin-top:16px}
+.fx .fi:first-child{margin-top:12px}
+#v-home .fi .sm{margin-top:0}
+.nd{position:absolute;left:-30px;top:3px;width:22px;height:22px;overflow:visible}
+.cn{position:absolute;left:-30px;top:20px;bottom:-26px;width:22px}
+.cn svg{display:block;width:100%;height:100%;overflow:visible}
+.dr{fill:none;stroke:var(--mu);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s ease-out}
+.cn .dr{stroke-opacity:.7;vector-effect:non-scaling-stroke}
+.fx.in .dr{stroke-dashoffset:0}
 .cbtn{font:inherit;font-size:14px;font-weight:500;color:var(--hd);background:none;border:1.5px solid var(--hd);border-radius:99px;padding:7px 16px;cursor:pointer;transition:background .15s,color .15s}
 .cbtn:hover{background:var(--hb);color:var(--hf)}
 .cl{margin:28px 0 0;font-size:16px;font-weight:600;line-height:1.7}
@@ -98,12 +106,12 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   html{scroll-behavior:auto}
   body{padding-bottom:96px}
   .hd{position:static;border-bottom:0}
-  .nav{padding:20px 18px 0}
+  .nav{padding:20px 22px 0}
   .logo img{height:38px}
   .lk .tile{display:none}
   .lg{margin-left:0}
   .lk{gap:10px}
-  .wrap{padding:0 18px}
+  .wrap{padding:0 22px}
   .view{display:none}
   .view.on{display:block}
   #v-home{padding:36px 0 24px}
@@ -117,7 +125,10 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   #v-home .t1+.sm{margin-top:12px}
   #v-home .sm.p1{margin-top:14px}
   .lb{margin-top:20px}
-  .lb+.sm{margin-top:10px!important}
+  .fx .fi{margin-top:14px}
+  .fx .fi:first-child{margin-top:10px}
+  .nd{left:-19px;top:4px;width:16px;height:16px}
+  .cn{left:-19px;top:17px;bottom:-23px;width:16px}
   .cbtn{padding:6px 14px}
   .cl{margin-top:20px;font-size:15px}
   .g3{gap:8px;margin-top:12px}
@@ -133,7 +144,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .bb a svg{font-size:20px}
   .bb a[aria-current=page]{background:var(--hb);color:var(--hf);text-shadow:none}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important}.f,.bl,.lk,.z{animation:none!important}.z{opacity:.8}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.f,.bl,.lk,.z{animation:none!important}.z{opacity:.8}.dr{stroke-dashoffset:0}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -170,9 +181,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       <p class="sm" data-t="born"></p>
       <p class="sm p1" data-t="p1"></p>
       <h2 class="lb" data-t="lb2"></h2>
-      <p class="sm" data-t="p1b"></p>
-      <p class="sm" data-t="p2"></p>
-      <p class="sm p3" data-t="p3"></p>
+      <div class="fx">
+      <div class="fi"><svg class="nd" viewBox="0 0 22 22" aria-hidden="true"><path class="dr" pathLength="1" d="M16.4 12.6C16.5 15.4 13.8 17.3 11 17C8.1 16.7 5.7 14.1 6.1 11.2C6.5 8.3 9.1 6.7 11.9 7C14.6 7.3 16.2 9.5 16 12.1" style="transition-delay:0.0s"/></svg><span class="cn"><svg viewBox="0 0 22 100" preserveAspectRatio="none" aria-hidden="true"><path class="dr" pathLength="1" d="M11 0C5 12 17 26 11 40C5 54 16 70 11.5 84C9 92 12 96 11 100" style="transition-delay:0.5s"/></svg></span><p class="sm" data-t="p1b"></p></div>
+      <div class="fi"><svg class="nd" viewBox="0 0 22 22" aria-hidden="true"><path class="dr" pathLength="1" d="M15.9 11.3C16.3 14.1 14 17 11.2 16.9C8.3 16.8 6.1 14.4 6.3 11.6C6.5 8.7 8.9 6.8 11.7 7C14.3 7.2 16.3 9.3 16.1 12" style="transition-delay:0.9s"/></svg><span class="cn"><svg viewBox="0 0 22 100" preserveAspectRatio="none" aria-hidden="true"><path class="dr" pathLength="1" d="M11 0C17 10 5 28 11 44C16 58 6 72 11 86C13 92 9.5 97 11 100" style="transition-delay:1.4s"/></svg></span><p class="sm" data-t="p2"></p></div>
+      <div class="fi"><svg class="nd" viewBox="0 0 22 22" aria-hidden="true"><path class="dr" pathLength="1" d="M16.1 12.2C16 15 13.4 17.2 10.8 16.9C8 16.6 5.9 13.9 6.2 11.1C6.5 8.4 9.3 6.6 12 7.1C14.4 7.5 15.9 9.4 15.8 11.8" style="transition-delay:1.8s"/></svg><p class="sm p3" data-t="p3"></p></div>
+      </div>
       <div id="contact">
         <p class="cl" data-t="cl"></p>
         <div class="g3">
@@ -334,6 +347,14 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   window.addEventListener('scroll', spy, {passive:true});
   window.addEventListener('hashchange', function(){ goTo(hashRoute()); });
   (mq.addEventListener ? mq.addEventListener('change', function(){ setActive(mq.matches ? hashRoute() : active); spy(); }) : null);
+
+  (function(){
+    var fx = document.querySelector('.fx');
+    if(!fx) return;
+    if(!('IntersectionObserver' in window)){ fx.classList.add('in'); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ fx.classList.add('in'); io.disconnect(); } }); }, {threshold:0.25});
+    io.observe(fx);
+  })();
 
   render();
   setInterval(clock, 30000);
