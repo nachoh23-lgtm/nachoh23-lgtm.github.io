@@ -1,0 +1,47 @@
+// =======================================================
+// CONFIGURACIÓN DE SEGURIDAD (TOKEN)
+// Cambia el valor de abajo por una clave tuya antes de desplegar.
+// Si lo dejas vacío "", cualquiera con la URL podría escribir en tu hoja.
+// =======================================================
+var SEGURIDAD_TOKEN = "TU_CLAVE_AQUI123";
+
+function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+
+    // 1. Validar el token
+    if (SEGURIDAD_TOKEN !== "" && (!data.token || data.token !== SEGURIDAD_TOKEN)) {
+      return devolverRespuesta("error", "🔑 Acceso denegado: token inválido.");
+    }
+
+    // 2. Limpiar los datos que llegan
+    var categoria = data.categoria ? data.categoria.trim() : "";
+    var concepto = data.concepto ? data.concepto.trim() : "";
+    var importeRaw = data.importe ? data.importe.toString().replace(',', '.').trim() : "0";
+    var importe = parseFloat(importeRaw);
+
+    // 3. Validar que los datos tengan sentido
+    if (!categoria || !concepto || isNaN(importe) || importe <= 0) {
+      return devolverRespuesta("error", "❌ Datos incorrectos: revisa el importe o la categoría.");
+    }
+
+    // 4. Guardar la fila: Fecha (A), Categoría (B), Concepto (C), Importe (D)
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = ss.getSheetByName("Entradas");
+    var timezone = ss.getSpreadsheetTimeZone();
+    var fecha = Utilities.formatDate(new Date(), timezone, "dd/MM/yyyy");
+
+    sheet.appendRow([fecha, categoria, concepto, importe]);
+
+    // 5. Confirmar
+    return devolverRespuesta("success", "✅ ¡Registrado! " + importe.toFixed(2) + "€ en " + categoria);
+
+  } catch (error) {
+    return devolverRespuesta("error", "💥 Error en el servidor: " + error.toString());
+  }
+}
+
+function devolverRespuesta(status, message) {
+  return ContentService.createTextOutput(JSON.stringify({"status": status, "message": message}))
+                       .setMimeType(ContentService.MimeType.JSON);
+}
